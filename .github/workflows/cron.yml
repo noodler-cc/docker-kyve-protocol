@@ -99,7 +99,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/kyve-protocol
+          images: noodlercc/kyve-protocol
           tags: |
             type=raw,value=${{ steps.get_package_info.outputs.package_version }}
             type=raw,value=latest,condition=${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -124,7 +124,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}/kyve-protocol
+          repository: noodlercc/kyve-protocol
           readme-filepath: README.md
 
       - name: Commit and push the updated previous_release file
@@ -140,7 +140,7 @@ jobs:
         if: steps.compare_release.outputs.new_release_detected == 'true'
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: '${{ secrets.DOCKERHUB_USERNAME }}/kyve-protocol:latest'
+          image-ref: 'noodlercc/kyve-protocol:latest'
           scan-type: 'fs'
           ignore-unfixed: true
           format: 'sarif'
