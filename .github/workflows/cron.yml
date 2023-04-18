@@ -125,7 +125,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: noodlercc/kyve-protocol
-          readme-filepath: README.md
 
       - name: Commit and push the updated previous_release file
         if: steps.compare_release.outputs.new_release_detected == 'true'
