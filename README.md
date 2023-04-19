@@ -54,6 +54,6 @@ Follow best practices for securing your Docker environment, such as using Docker
 Regularly scan your Docker images for vulnerabilities using tools such as Trivy, Clair, or Anchore.
 This Docker image is built on top of the official Ubuntu and Alpine images, and only includes the necessary dependencies for running the Kysor node. However, to further improve the security of your environment, we recommend that you always use the latest version of this Docker image and keep your system up-to-date with security patches.
 
-We regularly scan this Docker image using Trivy, a vulnerability scanner for containers. The results of the latest scan are available in the  [Security tab](https://github.com/noodler-cc/docker-kyve-protocol/security/code-scanning) of this repository.
+We regularly scan this Docker image using Trivy, a vulnerability scanner for containers. The results of the latest scan are available in the  [Security tab](https://github.com/noodler-cc/docker-kyve-protocol/security/) of this repository.
 
 If you find any security vulnerabilities in this Docker image or have any security concerns, please report them to us by creating an issue or contacting us directly. We appreciate any feedback that can help us improve the security of this Docker image.
